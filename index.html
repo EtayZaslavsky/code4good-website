@@ -294,7 +294,7 @@
   }
 
   /* ---------- JOIN ---------- */
-  .join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .join-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px;}
   .join-card{
     border-radius:var(--radius);padding:38px 30px;
     display:flex;flex-direction:column;
@@ -312,6 +312,34 @@
   .join-card.dark p{color:rgba(255,255,255,.72);}
   .join-card.light p{color:var(--ink-soft);}
   .join-card .btn{align-self:flex-start;}
+
+  /* ---------- REGISTRATION FORMS ---------- */
+  .forms-wrap{max-width:620px;margin:56px auto 0;display:flex;flex-direction:column;gap:26px;}
+  .reg-form{
+    scroll-margin-top:100px;
+    background:#fff;border:1px solid var(--border);border-radius:var(--radius);
+    padding:36px;box-shadow:var(--shadow-sm);
+  }
+  .reg-form h3{font-size:1.25rem;font-weight:800;color:var(--ink);margin-bottom:6px;}
+  .reg-form .form-sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:24px;}
+  .form-row{margin-bottom:18px;}
+  .form-row:last-of-type{margin-bottom:0;}
+  .form-row label{display:block;font-size:.85rem;font-weight:600;color:var(--ink);margin-bottom:6px;}
+  .form-row input,.form-row select,.form-row textarea{
+    width:100%;padding:11px 14px;border-radius:10px;border:1.5px solid var(--border);
+    font-family:inherit;font-size:.92rem;color:var(--ink);background:var(--bg-soft);
+    transition:border-color .2s,background .2s;
+  }
+  .form-row input:focus,.form-row select:focus,.form-row textarea:focus{
+    outline:none;border-color:var(--teal-500);background:#fff;
+  }
+  .form-row textarea{resize:vertical;min-height:90px;font-family:inherit;}
+  .form-actions{margin-top:22px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
+  .form-status{font-size:.88rem;font-weight:600;display:none;}
+  .form-status.show{display:block;}
+  .form-status.ok{color:var(--teal-600);}
+  .form-status.err{color:#b91c1c;}
+  .reg-form button[type="submit"]:disabled{opacity:.6;cursor:not-allowed;}
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--dark);color:rgba(255,255,255,.6);padding:70px 0 30px;}
@@ -689,17 +717,135 @@
         <a href="mailto:code4good.idc@gmail.com" class="btn btn-white"><span class="i18n" data-he="להרשמה" data-en="Apply Now">להרשמה</span></a>
       </div>
       <div class="join-card light reveal">
+        <div class="join-icon">🧭</div>
+        <h3 class="i18n" data-he="ראשי/ות צוות" data-en="Team Leads">ראשי/ות צוות</h3>
+        <p class="i18n" data-he="הובילו צוות פיתוח מול עמותה שותפה — נסיון בפיתוח וניהול, לצד ליווי והכשרה ייעודית לפני תחילת המחזור." data-en="Lead a development team working directly with a partner NGO — development and leadership experience, backed by dedicated training before the cycle starts.">הובילו צוות פיתוח מול עמותה שותפה — נסיון בפיתוח וניהול, לצד ליווי והכשרה ייעודית לפני תחילת המחזור.</p>
+        <a href="#form-teamlead" class="btn btn-dark"><span class="i18n" data-he="הרשמה כראש/ת צוות" data-en="Apply as Team Lead">הרשמה כראש/ת צוות</span></a>
+      </div>
+      <div class="join-card light reveal">
         <div class="join-icon">🤝</div>
         <h3 class="i18n" data-he="עמותה או ארגון חברתי" data-en="NGO / Social Org">עמותה או ארגון חברתי</h3>
         <p class="i18n" data-he="קבלו פיתוח טכנולוגי איכותי, בחינם ובמסירות מלאה, מצוות מחויב של סטודנטים ומנטורים — ותנו לטכנולוגיה לשרת את המשימה שלכם." data-en="Get high-quality technology development, free of charge and with full dedication, from a committed team of students and mentors — and let technology serve your mission.">קבלו פיתוח טכנולוגי איכותי, בחינם ובמסירות מלאה, מצוות מחויב של סטודנטים ומנטורים — ותנו לטכנולוגיה לשרת את המשימה שלכם.</p>
-        <a href="mailto:code4good.idc@gmail.com" class="btn btn-dark"><span class="i18n" data-he="צרו קשר" data-en="Get in Touch">צרו קשר</span></a>
+        <a href="#form-ngo" class="btn btn-dark"><span class="i18n" data-he="הרשמת עמותה" data-en="Register Your NGO">הרשמת עמותה</span></a>
       </div>
       <div class="join-card light reveal">
         <div class="join-icon">💡</div>
         <h3 class="i18n" data-he="אנשי ואנשות מקצוע" data-en="Industry Professionals">אנשי ואנשות מקצוע</h3>
         <p class="i18n" data-he="ליווי צוות סטודנטים כמנטור אישי לאורך סמסטר, או ייעוץ נקודתי בעת הצורך — כל תרומה מהידע שלכם עושה הבדל." data-en="Mentor a student team personally for a semester, or provide point-in-time expert consulting — any contribution of your expertise makes a difference.">ליווי צוות סטודנטים כמנטור אישי לאורך סמסטר, או ייעוץ נקודתי בעת הצורך — כל תרומה מהידע שלכם עושה הבדל.</p>
-        <a href="mailto:code4good.idc@gmail.com" class="btn btn-dark"><span class="i18n" data-he="הציעו ליווי" data-en="Offer to Mentor">הציעו ליווי</span></a>
+        <a href="#form-mentor" class="btn btn-dark"><span class="i18n" data-he="הציעו ליווי" data-en="Offer to Mentor">הציעו ליווי</span></a>
       </div>
+    </div>
+
+    <div class="forms-wrap">
+      <form class="reg-form reveal" id="form-teamlead" data-form-name="Team Lead">
+        <input type="hidden" name="access_key" value="a16ba057-1b83-474e-adb6-bd65a402be34">
+        <input type="hidden" name="subject" value="New Team Lead Registration — Code4Good">
+        <input type="hidden" name="from_name" value="Code4Good Website">
+        <h3 class="i18n" data-he="הרשמה כראש/ת צוות" data-en="Team Lead Registration">הרשמה כראש/ת צוות</h3>
+        <p class="form-sub i18n" data-he="ספרו לנו קצת עליכם ונחזור אליכם עם הפרטים למחזור הבא." data-en="Tell us a bit about yourself and we'll get back to you with details for the next cycle.">ספרו לנו קצת עליכם ונחזור אליכם עם הפרטים למחזור הבא.</p>
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <label class="i18n" data-he="שם מלא" data-en="Full name">שם מלא</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="אימייל" data-en="Email">אימייל</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="טלפון" data-en="Phone">טלפון</label>
+          <input type="tel" name="phone">
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="שנה ותכנית לימודים" data-en="Year & degree program">שנה ותכנית לימודים</label>
+          <input type="text" name="program">
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="ניסיון רלוונטי בפיתוח או בניהול" data-en="Relevant development or leadership experience">ניסיון רלוונטי בפיתוח או בניהול</label>
+          <textarea name="experience"></textarea>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="לינקדאין / גיטהאב (רשות)" data-en="LinkedIn / GitHub (optional)">לינקדאין / גיטהאב (רשות)</label>
+          <input type="text" name="links">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary"><span class="i18n" data-he="שליחה" data-en="Submit">שליחה</span></button>
+          <span class="form-status"></span>
+        </div>
+      </form>
+
+      <form class="reg-form reveal" id="form-ngo" data-form-name="NGO">
+        <input type="hidden" name="access_key" value="895fb538-9d88-41d0-b852-2a18d3c7209f">
+        <input type="hidden" name="subject" value="New NGO Registration — Code4Good">
+        <input type="hidden" name="from_name" value="Code4Good Website">
+        <h3 class="i18n" data-he="הרשמת עמותה" data-en="NGO Registration">הרשמת עמותה</h3>
+        <p class="form-sub i18n" data-he="ספרו לנו על האתגר הטכנולוגי שלכם ונחזור אליכם." data-en="Tell us about your technological challenge and we'll get back to you.">ספרו לנו על האתגר הטכנולוגי שלכם ונחזור אליכם.</p>
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <label class="i18n" data-he="שם העמותה / הארגון" data-en="Organization name">שם העמותה / הארגון</label>
+          <input type="text" name="org_name" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="איש/אשת קשר" data-en="Contact person">איש/אשת קשר</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="אימייל" data-en="Email">אימייל</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="טלפון" data-en="Phone">טלפון</label>
+          <input type="tel" name="phone">
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="תארו את האתגר הטכנולוגי שלכם" data-en="Describe your technological challenge">תארו את האתגר הטכנולוגי שלכם</label>
+          <textarea name="need" required></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary"><span class="i18n" data-he="שליחה" data-en="Submit">שליחה</span></button>
+          <span class="form-status"></span>
+        </div>
+      </form>
+
+      <form class="reg-form reveal" id="form-mentor" data-form-name="Mentor">
+        <input type="hidden" name="access_key" value="7c282fb3-43dd-4154-bbbf-0d859008e541">
+        <input type="hidden" name="subject" value="New Mentor Registration — Code4Good">
+        <input type="hidden" name="from_name" value="Code4Good Website">
+        <h3 class="i18n" data-he="הרשמה כמנטור/ית" data-en="Mentor Registration">הרשמה כמנטור/ית</h3>
+        <p class="form-sub i18n" data-he="ספרו לנו על עצמכם ואיך תרצו לתרום מהידע שלכם." data-en="Tell us about yourself and how you'd like to contribute your expertise.">ספרו לנו על עצמכם ואיך תרצו לתרום מהידע שלכם.</p>
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-row">
+          <label class="i18n" data-he="שם מלא" data-en="Full name">שם מלא</label>
+          <input type="text" name="name" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="אימייל" data-en="Email">אימייל</label>
+          <input type="email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="טלפון" data-en="Phone">טלפון</label>
+          <input type="tel" name="phone">
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="תחום התמחות" data-en="Area of expertise">תחום התמחות</label>
+          <input type="text" name="expertise">
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="היקף מעורבות" data-en="Availability">היקף מעורבות</label>
+          <select name="availability">
+            <option value="semester" class="i18n" data-he="ליווי צוות לאורך סמסטר" data-en="Team mentor for a semester">ליווי צוות לאורך סמסטר</option>
+            <option value="pointintime" class="i18n" data-he="ייעוץ נקודתי" data-en="Point-in-time consulting">ייעוץ נקודתי</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="i18n" data-he="לינקדאין (רשות)" data-en="LinkedIn (optional)">לינקדאין (רשות)</label>
+          <input type="text" name="links">
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary"><span class="i18n" data-he="שליחה" data-en="Submit">שליחה</span></button>
+          <span class="form-status"></span>
+        </div>
+      </form>
     </div>
   </div>
 </section>
@@ -775,6 +921,38 @@
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // ---------- registration forms ----------
+  const formMessages = {
+    ok: { he:'תודה! הפרטים נשלחו בהצלחה, נחזור אליכם בקרוב.', en:"Thanks! Your details were submitted — we'll be in touch soon." },
+    err: { he:'משהו השתבש. נסו שוב או שלחו מייל ל-code4good.idc@gmail.com', en:'Something went wrong. Please try again or email code4good.idc@gmail.com' },
+  };
+  document.querySelectorAll('.reg-form').forEach(form=>{
+    form.addEventListener('submit', async (e)=>{
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      const status = form.querySelector('.form-status');
+      btn.disabled = true;
+      status.classList.remove('show','ok','err');
+      try{
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method:'POST',
+          headers:{ 'Accept':'application/json' },
+          body: new FormData(form),
+        });
+        const data = await res.json();
+        if(!data.success) throw new Error(data.message || 'submit failed');
+        form.reset();
+        status.textContent = formMessages.ok[lang];
+        status.classList.add('show','ok');
+      }catch(err){
+        status.textContent = formMessages.err[lang];
+        status.classList.add('show','err');
+      }finally{
+        btn.disabled = false;
+      }
+    });
+  });
 </script>
 
 </body>
