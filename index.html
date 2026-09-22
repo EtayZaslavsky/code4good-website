@@ -63,7 +63,7 @@
     box-shadow:var(--shadow-sm);
     padding:12px 0;
   }
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;}
+  .nav-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;}
   .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.3rem;color:var(--ink);}
   .logo .brace{color:var(--teal-500);}
   .nav-links{display:flex;align-items:center;gap:32px;}
@@ -100,8 +100,6 @@
   .btn-white{background:#fff;color:var(--teal-600);}
   .btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12);}
   .nav .btn{padding:10px 20px;font-size:.85rem;}
-  .burger{display:none;flex-direction:column;gap:5px;padding:6px;}
-  .burger span{width:22px;height:2.5px;background:var(--ink);border-radius:2px;}
 
   /* ---------- HERO ---------- */
   .hero{
@@ -309,8 +307,6 @@
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:980px){
-    .nav-links{display:none;}
-    .burger{display:flex;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
     .steps{grid-template-columns:1fr;}
     .projects-grid{grid-template-columns:repeat(2,1fr);}
@@ -343,7 +339,6 @@
         <span id="langBtnText">EN</span>
       </button>
       <a href="#join" class="btn btn-primary"><span class="i18n" data-he="הצטרפו אלינו" data-en="Get Involved">הצטרפו אלינו</span></a>
-      <button class="burger" id="burger" onclick="document.getElementById('mnav').classList.toggle('open')"><span></span><span></span><span></span></button>
     </div>
   </div>
 </nav>
