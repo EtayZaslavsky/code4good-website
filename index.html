@@ -204,6 +204,7 @@
   }
   .team-name{font-weight:700;color:var(--ink);font-size:.98rem;}
   .team-role{color:var(--ink-soft);font-size:.86rem;margin-top:2px;}
+  .team-bio{color:var(--ink-faint);font-size:.82rem;margin-top:6px;line-height:1.5;}
   .about-mini-note{margin-top:16px;font-size:.85rem;color:var(--ink-faint);}
 
   /* ---------- HOW IT WORKS ---------- */
@@ -388,22 +389,25 @@
         <div class="team-row">
           <div class="team-avatar">א</div>
           <div>
-            <div class="team-name">Etay Zaslavsky</div>
+            <div class="team-name i18n" data-he="איתי זסלבסקי" data-en="Etay Zaslavsky">Etay Zaslavsky</div>
             <div class="team-role i18n" data-he="מנהל תוכנית שותף" data-en="Program Co-Manager">מנהל תוכנית שותף</div>
+            <div class="team-bio i18n" data-he="מפתח פולסטאק מגיל 10; כיום מוביל טכנולוגי במשרד ה-CTO בחברת Guardz. הוביל בעבר את מחזור 2026 של Code4Good — ראיין 15 עמותות, בחר 7 פרויקטים והרכיב את צוותי הסטודנטים שהוציאו אותם לפועל." data-en="Full-stack developer since age 10; now Tech Lead in the CTO Office at Guardz. Previously led Code4Good's 2026 cohort — interviewing 15 NGOs, selecting 7 projects, and building the student teams that delivered them.">Full-stack developer since age 10; now Tech Lead in the CTO Office at Guardz. Previously led Code4Good's 2026 cohort — interviewing 15 NGOs, selecting 7 projects, and building the student teams that delivered them.</div>
           </div>
         </div>
         <div class="team-row">
           <div class="team-avatar">ל</div>
           <div>
-            <div class="team-name">Lihi Trabes</div>
+            <div class="team-name i18n" data-he="ליהיא טרבס" data-en="Lihi Trabes">Lihi Trabes</div>
             <div class="team-role i18n" data-he="מנהלת תוכנית שותפה" data-en="Program Co-Manager">מנהלת תוכנית שותפה</div>
+            <div class="team-bio i18n" data-he="מפתחת כלי AI בחברת Mad Brain Games, עם רקע תפעולי מתקופתה באפל. לומדת מדעי המחשב באוניברסיטת רייכמן." data-en="AI Tools Developer at Mad Brain Games, with an operations background from her time at Apple. Studying Computer Science at Reichman University.">AI Tools Developer at Mad Brain Games, with an operations background from her time at Apple. Studying Computer Science at Reichman University.</div>
           </div>
         </div>
         <div class="team-row">
           <div class="team-avatar">ש</div>
           <div>
-            <div class="team-name">Shira Malamud</div>
+            <div class="team-name i18n" data-he="שירה מלמוד" data-en="Shira Malamud">Shira Malamud</div>
             <div class="team-role i18n" data-he="מנהלת תוכנית שותפה" data-en="Program Co-Manager">מנהלת תוכנית שותפה</div>
+            <div class="team-bio i18n" data-he="שירתה כמפעילת תקשורת טכנית בחיל המודיעין, בתפעול ותחזוקת מערכות תקשורת מאובטחות. כיום לומדת מדעי המחשב באוניברסיטת רייכמן." data-en="Served as a Technical Communications Operator in the IDF Intelligence Corps, operating and maintaining secure communication systems. Now studying Computer Science at Reichman University.">Served as a Technical Communications Operator in the IDF Intelligence Corps, operating and maintaining secure communication systems. Now studying Computer Science at Reichman University.</div>
           </div>
         </div>
       </div>
@@ -451,7 +455,7 @@
     <div class="filters">
       <button class="filter-btn active" data-filter="all" onclick="setFilter('all',this)"><span class="i18n" data-he="הכל" data-en="All">הכל</span></button>
       <button class="filter-btn" data-filter="2026" onclick="setFilter('2026',this)"><span class="i18n" data-he="מחזור 2026" data-en="2026 Cycle">מחזור 2026</span></button>
-      <button class="filter-btn" data-filter="earlier" onclick="setFilter('earlier',this)"><span class="i18n" data-he="מחזורים קודמים" data-en="Earlier Cycles">מחזורים קודמים</span></button>
+      <button class="filter-btn" data-filter="earlier" onclick="setFilter('earlier',this)"><span class="i18n" data-he="מחזור 2025" data-en="2025 Cycle">מחזור 2025</span></button>
     </div>
 
     <div class="projects-grid" id="projectsGrid">
@@ -531,7 +535,7 @@
       </div>
 
       <div class="pcard reveal" data-cat="earlier">
-        <span class="tag-year i18n" data-he="מחזור קודם" data-en="Earlier Cycle">מחזור קודם</span>
+        <span class="tag-year i18n" data-he="2025" data-en="2025">2025</span>
         <div class="picon" style="background:#fef3d6;">🦋</div>
         <h3 class="i18n" data-he="פלטפורמה לכנפיים של קרמבו" data-en="Krembo Wings Platform">פלטפורמה לכנפיים של קרמבו</h3>
         <div class="org i18n" data-he="כנפיים של קרמבו" data-en="Krembo Wings">כנפיים של קרמבו</div>
@@ -540,7 +544,7 @@
       </div>
 
       <div class="pcard reveal" data-cat="earlier">
-        <span class="tag-year i18n" data-he="מחזור קודם" data-en="Earlier Cycle">מחזור קודם</span>
+        <span class="tag-year i18n" data-he="2025" data-en="2025">2025</span>
         <div class="picon" style="background:#dff3f7;">🚑</div>
         <h3 class="i18n" data-he="Heroes for Life — דשבורד ניהול" data-en="Heroes for Life — Ops Dashboard">Heroes for Life — דשבורד ניהול</h3>
         <div class="org i18n" data-he="Heroes for Life" data-en="Heroes for Life">Heroes for Life</div>
@@ -549,7 +553,7 @@
       </div>
 
       <div class="pcard reveal" data-cat="earlier">
-        <span class="tag-year i18n" data-he="מחזור קודם" data-en="Earlier Cycle">מחזור קודם</span>
+        <span class="tag-year i18n" data-he="2025" data-en="2025">2025</span>
         <div class="picon" style="background:#eee6fb;">🎗️</div>
         <h3 class="i18n" data-he="פלטפורמה לאמהות החיילים הבודדים" data-en="Mother of the Lone Soldiers Platform">פלטפורמה לאמהות החיילים הבודדים</h3>
         <div class="org i18n" data-he="אמא חיילים בודדים" data-en="Mother of the Lone Soldiers">אמא חיילים בודדים</div>
