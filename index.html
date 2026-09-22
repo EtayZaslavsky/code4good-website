@@ -316,10 +316,12 @@
   /* ---------- REGISTRATION FORMS ---------- */
   .forms-wrap{max-width:620px;margin:56px auto 0;display:flex;flex-direction:column;gap:26px;}
   .reg-form{
+    display:none;
     scroll-margin-top:100px;
     background:#fff;border:1px solid var(--border);border-radius:var(--radius);
     padding:36px;box-shadow:var(--shadow-sm);
   }
+  .reg-form.open{display:block;}
   .reg-form h3{font-size:1.25rem;font-weight:800;color:var(--ink);margin-bottom:6px;}
   .reg-form .form-sub{color:var(--ink-soft);font-size:.9rem;margin-bottom:24px;}
   .form-row{margin-bottom:18px;}
@@ -921,6 +923,26 @@
     entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
   }, {threshold:.12});
   document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+  // ---------- open forms on click only ----------
+  function openForm(id){
+    document.querySelectorAll('.reg-form').forEach(f=>{
+      const show = f.id === id;
+      f.classList.toggle('open', show);
+      if(show) f.classList.add('in');
+    });
+    const target = document.getElementById(id);
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  document.querySelectorAll('a[href^="#form-"]').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      openForm(a.getAttribute('href').slice(1));
+    });
+  });
+  if(location.hash.startsWith('#form-')){
+    openForm(location.hash.slice(1));
+  }
 
   // ---------- registration forms ----------
   const formMessages = {
