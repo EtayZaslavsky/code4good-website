@@ -224,6 +224,20 @@
   .step h3{font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:10px;}
   .step p{color:var(--ink-soft);font-size:.95rem;}
 
+  /* ---------- TIMELINE ---------- */
+  .timeline-head{text-align:center;max-width:640px;margin:90px auto 50px;}
+  .timeline{position:relative;max-width:720px;margin:0 auto;}
+  .timeline-item{display:flex;gap:22px;position:relative;padding-bottom:38px;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-marker{position:relative;flex-shrink:0;width:16px;display:flex;justify-content:center;}
+  .timeline-dot{width:16px;height:16px;border-radius:50%;background:var(--teal-500);border:3px solid var(--teal-100);z-index:1;margin-top:2px;}
+  .timeline-line{position:absolute;top:18px;bottom:-38px;left:50%;transform:translateX(-50%);width:2px;background:var(--border);}
+  .timeline-item:last-child .timeline-line{display:none;}
+  .timeline-content{flex:1;padding-top:1px;}
+  .timeline-month{font-size:.76rem;font-weight:700;color:var(--teal-600);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px;}
+  .timeline-title{font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  .timeline-desc{color:var(--ink-soft);font-size:.92rem;}
+
   /* ---------- PROJECTS ---------- */
   .filters{display:flex;justify-content:center;gap:10px;margin-bottom:48px;flex-wrap:wrap;}
   .filter-btn{
@@ -319,6 +333,16 @@
     .hero-cta{flex-direction:column;width:100%;}
     .hero-cta .btn{width:100%;justify-content:center;}
     .nav .btn{display:none;}
+    .sec{padding:64px 0;}
+    .hero-stats{gap:12px;}
+    .hstat{padding:16px 8px;}
+    .timeline-head{margin:56px auto 30px;}
+    .timeline-item{gap:14px;padding-bottom:28px;}
+    .timeline-marker{width:12px;}
+    .timeline-dot{width:12px;height:12px;margin-top:3px;}
+    .timeline-line{top:15px;bottom:-28px;}
+    .timeline-title{font-size:.98rem;}
+    .timeline-desc{font-size:.88rem;}
   }
 </style>
 </head>
@@ -435,6 +459,70 @@
         <div class="num">03</div>
         <h3 class="i18n" data-he="בונים ומשיקים פתרון" data-en="We Build & Launch">בונים ומשיקים פתרון</h3>
         <p class="i18n" data-he="הצוות מתכנן, מפתח ומשיק מערכת אמיתית בסביבת פרודקשן — פתרון שממשיך לשרת את הארגון גם בסיום הפרויקט." data-en="The team designs, develops, and launches a real production system — a solution that keeps serving the organization long after the project ends.">הצוות מתכנן, מפתח ומשיק מערכת אמיתית בסביבת פרודקשן — פתרון שממשיך לשרת את הארגון גם בסיום הפרויקט.</p>
+      </div>
+    </div>
+
+    <div class="timeline-head reveal">
+      <span class="eyebrow i18n" data-he="לוח הזמנים" data-en="The Schedule">לוח הזמנים</span>
+      <h2 class="i18n" data-he="לוח הזמנים השנתי" data-en="The Annual Timeline">לוח הזמנים השנתי</h2>
+      <p class="i18n" data-he="מחזור מלא של Code4Good, חודש אחר חודש — מגיוס העמותות ועד להשקת הפתרונות." data-en="A full Code4Good cycle, month by month — from recruiting NGOs to launching the finished solutions.">מחזור מלא של Code4Good, חודש אחר חודש — מגיוס העמותות ועד להשקת הפתרונות.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="אוקטובר" data-en="October">אוקטובר</div>
+          <h3 class="timeline-title i18n" data-he="גיוס עמותות" data-en="Recruiting NGOs">גיוס עמותות</h3>
+          <p class="timeline-desc i18n" data-he="מאתרים ומראיינים עמותות עם אתגר טכנולוגי אמיתי, ובוחרים את הפרויקטים למחזור." data-en="Identifying and interviewing NGOs with a real technological challenge, and selecting the cohort's projects.">מאתרים ומראיינים עמותות עם אתגר טכנולוגי אמיתי, ובוחרים את הפרויקטים למחזור.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="נובמבר–דצמבר" data-en="November–December">נובמבר–דצמבר</div>
+          <h3 class="timeline-title i18n" data-he="גיוס ראשי צוותים ומנטורים" data-en="Recruiting Team Leads & Mentors">גיוס ראשי צוותים ומנטורים</h3>
+          <p class="timeline-desc i18n" data-he="מגייסים ראשי צוותים מנוסים ומנטורים מהתעשייה שילוו כל פרויקט לאורך המחזור." data-en="Recruiting experienced team leads and industry mentors to guide each project through the cycle.">מגייסים ראשי צוותים מנוסים ומנטורים מהתעשייה שילוו כל פרויקט לאורך המחזור.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="ינואר" data-en="January">ינואר</div>
+          <h3 class="timeline-title i18n" data-he="גיוס מפתחים/ות" data-en="Recruiting Software Engineers">גיוס מפתחים/ות</h3>
+          <p class="timeline-desc i18n" data-he="פתיחת ההרשמה לסטודנטים למדעי המחשב, וגיבוש צוותי הפיתוח לכל פרויקט." data-en="Opening registration for Computer Science students, and forming the development teams for each project.">פתיחת ההרשמה לסטודנטים למדעי המחשב, וגיבוש צוותי הפיתוח לכל פרויקט.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="ינואר–פברואר" data-en="January–February">ינואר–פברואר</div>
+          <h3 class="timeline-title i18n" data-he="הכשרת ראשי צוותים" data-en="Team Lead Preparatory">הכשרת ראשי צוותים</h3>
+          <p class="timeline-desc i18n" data-he="ראשי הצוותים עוברים הכשרה ייעודית להובלת צוות פיתוח וניהול פרויקט מול עמותה." data-en="Team leads undergo dedicated training in leading a dev team and managing a project alongside an NGO.">ראשי הצוותים עוברים הכשרה ייעודית להובלת צוות פיתוח וניהול פרויקט מול עמותה.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="פברואר, אחרי המבחנים" data-en="February, after exams">פברואר, אחרי המבחנים</div>
+          <h3 class="timeline-title i18n" data-he="שבוע הכנה לצוותים" data-en="1-Week Team Preparatory">שבוע הכנה לצוותים</h3>
+          <p class="timeline-desc i18n" data-he="שבוע אינטנסיבי שבו כל הצוותים מתכנסים יחד לתכנון, אפיון ופתיחת הפרויקט." data-en="An intensive week where every team comes together to plan, scope, and kick off their project.">שבוע אינטנסיבי שבו כל הצוותים מתכנסים יחד לתכנון, אפיון ופתיחת הפרויקט.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div><div class="timeline-line"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="מרץ–יוני" data-en="March–June">מרץ–יוני</div>
+          <h3 class="timeline-title i18n" data-he="עבודת הצוותים" data-en="Teams at Work">עבודת הצוותים</h3>
+          <p class="timeline-desc i18n" data-he="הצוותים מפתחים, בונים ומשיקים את הפתרון עבור העמותה השותפה, בליווי מנטור לאורך כל הדרך." data-en="Teams develop, build, and launch the solution for their partner NGO, mentored throughout.">הצוותים מפתחים, בונים ומשיקים את הפתרון עבור העמותה השותפה, בליווי מנטור לאורך כל הדרך.</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-marker"><div class="timeline-dot"></div></div>
+        <div class="timeline-content">
+          <div class="timeline-month i18n" data-he="יולי 2027" data-en="July 2027">יולי 2027</div>
+          <h3 class="timeline-title i18n" data-he="סיום התוכנית" data-en="Program Concludes">סיום התוכנית</h3>
+          <p class="timeline-desc i18n" data-he="המחזור מסתיים בהצגת הפתרונות המוגמרים והשקתם בפני העמותות." data-en="The cycle wraps up with the finished solutions presented and handed off to the NGOs.">המחזור מסתיים בהצגת הפתרונות המוגמרים והשקתם בפני העמותות.</p>
+        </div>
       </div>
     </div>
   </div>
